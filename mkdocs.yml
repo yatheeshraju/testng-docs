@@ -9,6 +9,7 @@ nav:
     - 'Introduction' : 'basic.md'
     - 'Getting Started': 'gettingstarted.md'
     - 'Download' : 'download.md'
+    - 'Migrating from JUnit' : 'migratingfromjunit.md'
     - 'Annotations' : 'annotations.md'
     - 'Test methods, classes and groups' : 'testhelpers.md'
     - 'Run TestNG': 'runningtestng.md'
@@ -21,6 +22,9 @@ nav:
     - ' Selenium ': 'selenium.md'
     - 'Eclipse' : 'eclipse.md'
     - 'Intelli JIdea' : 'idea.md'
+    - 'Java Doc' : 'https://javadoc.jitpack.io/com/github/cbeust/testng/master/javadoc/' 
+    - 'Book' : 'book.md'
+
 
 copyright: 'Stylized docs of TestNG by Yatheesh Raju'
 
