@@ -3,7 +3,7 @@
 You can invoke TestNG in several different ways:
 
 * With a testng.xml file
-* With ant
+* [With ant](/ant)
 * From the command line
 
 This section describes the format of testng.xml (you will find documentation on ant and the command line below).

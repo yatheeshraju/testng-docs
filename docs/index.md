@@ -4,8 +4,8 @@
 
 Writing a test is typically a three-step process:
 
-1. Write the business logic of your test and insert TestNG annotations in your code.
-2. Add the information about your test (e.g. the class name, the groups you wish to run, etc...) in a testng.xml file or in build.xml.
+1. Write the business logic of your test and insert [TestNG annotations](/annotations) in your code.
+2. Add the information about your test (e.g. the class name, the groups you wish to run, etc...) in a [testng.xml](/testngxml) file or in build.xml.
 3. Run TestNG.
 
 

@@ -1,10 +1,11 @@
 #Run TestNG
 
 TestNG can be invoked in different ways:
+
 * Command line
-* ant
-* Eclipse
-* IntelliJ's IDEA
+* [ant](/ant)
+* [Eclipse](/eclipse)
+* [IntelliJ's IDEA](/idea)
 
 This section only explains how to invoke TestNG from the command line. Please click on one of the links above if you are interested in one of the other ways.
 
