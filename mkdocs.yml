@@ -2,5 +2,5 @@ site_name: TestNg Docs
 
 repo_url: https://github.com/yatheeshraju/testng-docs
 
-contributors: yatheeshraju
-theme: material
+theme:
+  name: 'material'
