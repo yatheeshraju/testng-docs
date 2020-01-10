@@ -1,5 +1,13 @@
-site_name: TestNg Docs
+site_name: TestNG Docs
 
 repo_url: https://github.com/yatheeshraju/testng-docs
 
 theme: 'material'
+
+nav:
+    - 'Welcome' : 'index.md'
+    - 'Introduction' : 'basic.md'
+    - 'Getting Started': 'gettingstarted.md'
+    - 'Run TestNG': 'runningtestng.md'
+    - 'TestNG XML': 'testngxml.md'
+    -  'Ant': 'ant.md'

@@ -1,27 +1,47 @@
-# Introduction
+# Welcome 
+TestNG is a testing framework inspired from JUnit and NUnit but introducing some new functionalities that make it more powerful and easier to use, such as:
 
-> TestNG is a testing framework designed to simplify a broad range of testing needs, from unit testing (testing a class in isolation of the others) to integration testing (testing entire systems made of several classes, several packages and even several external frameworks, such as application servers).
+* Annotations.
+* Run your tests in arbitrarily big thread pools with various policies available (all methods in their own thread, one thread per test class, etc...).
+* Test that your code is multithread safe.
+* Flexible test configuration.
+* Support for data-driven testing (with @DataProvider).
+* Support for parameters.
+* Powerful execution model (no more TestSuite).
+* Supported by a variety of tools and plug-ins (Eclipse, IDEA, Maven, etc...).
+* Embeds BeanShell for further flexibility.
+* Default JDK functions for runtime and logging (no dependencies).
+* Dependent methods for application server testing.
+* TestNG is designed to cover all categories of tests:  unit, functional, end-to-end, integration, etc...
 
-Writing a test is typically a three-step process:
+### Requirements
 
-1. Write the business logic of your test and insert [TestNG annotations](/annotations) in your code.
-2. Add the information about your test (e.g. the class name, the groups you wish to run, etc...) in a [testng.xml](/testngxml) file or in build.xml.
-3. Run TestNG.
+TestNG requires JDK 7 or higher.
 
+### Mailing-lists
 
-You can find a quick example on the Getting Started page.
+* The users mailing-list can be found on [Google Groups](http://groups.google.com/group/testng-users).
+* If you are interested in working on TestNG itself, join the [developer mailing-list](http://groups.google.com/group/testng-users).
+* If you are only interested in hearing about new versions of TestNG, you can join the low volume [TestNG announcement mailing-list](http://groups.google.com/group/testng-announcements).
 
+### Locations of the projects
 
-The concepts used in this documentation are as follows:
+If you are interested in contributing to TestNG or one of the IDE plug-ins, you will find them in the following locations:
 
-* A suite is represented by one XML file. It can contain one or more tests and is defined by the <suite> tag.
-* A test is represented by <test> and can contain one or more TestNG classes.
-* A TestNG class is a Java class that contains at least one TestNG annotation. It is represented by the <class> tag and can contain one or more test methods.
-* A test method is a Java method annotated by @Test in your source.
-* A TestNG test can be configured by @BeforeXXX and @AfterXXX annotations which allows to perform some Java logic before and after a certain point, these points being either of the items listed above.
+* [TestNG](https://github.com/cbeust/testng/)
+* [Eclipse plug-in](https://github.com/cbeust/testng-eclipse/)
+* [IDEA IntelliJ plug-in](https://github.com/JetBrains/intellij-community/tree/master/plugins/testng)
+* [NetBeans plug-in](http://wiki.netbeans.org/TestNG)
 
-The rest of this manual will explain the following:
+### Bug reports
 
-* A list of all the annotations with a brief explanation. This will give you an idea of the various functionalities offered by TestNG but you will probably want to consult the section dedicated to each of these annotations to learn the details.
-* A description of the testng.xml file, its syntax and what you can specify in it.
-* A detailed list of the various features and how to use them with a combination of annotations and testng.xml.
+If you think you found a bug, here is how to report it:
+
+* Create a small project that will allow us to reproduce this bug. In most cases, one or two Java source files and a testng.xml file should be sufficient. Then you can either zip it and email it to the [testng-dev mailing-list](http://groups.google.com/group/testng-dev) or make it available on an open source hosting site, such as [github](https://github.com/) and email testng-dev so we know about it. Please make sure that this project is self contained so that we can build it right away (remove the dependencies on external or proprietary frameworks, etc...).
+* If the bug you observed is on the Eclipse plug-in, make sure your sample project contains the .project and .classpath files.
+* [File a bug](https://github.com/cbeust/testng/issues).
+
+For more information, you can either [download](/download) TestNG, read the [manual](/index).
+
+### License
+Apache 2.0
