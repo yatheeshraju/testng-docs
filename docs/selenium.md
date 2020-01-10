@@ -188,11 +188,12 @@ You can launch TestNG from the command line, using a Eclipse plugin or even prog
 
 If you installed TestNG correctly, you will see this menu when you right click on the XML file:
 
->Note : Image Missing  
+![screenshots](assets/images/testNG-run.png)
 
 Click on “Run as TestNG Suite” and your test will start running. You will then see this nice results tree:
 
->Note : Image Missing  
+
+![screenshots](assets/images/testNG-exec.png)
 
 ### Thinking about the future
 

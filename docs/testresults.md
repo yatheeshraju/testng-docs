@@ -123,7 +123,8 @@ If you need to log messages that should appear in the generated HTML reports, yo
 ```java 
 Reporter.log("M3 WAS CALLED");
 ``` 
- >alert ! missing images 
+![screenshots](assets/images/show-output1.png)
+![screenshots](assets/images/show-output2.png)
 
 #### XML Reports
 
