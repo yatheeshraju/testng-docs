@@ -9,6 +9,7 @@ nav:
     - 'Introduction' : 'basic.md'
     - 'Getting Started': 'gettingstarted.md'
     - 'Download' : 'download.md'
+    - 'Annotations' : 'annotations.md'
     - 'Test methods, classes and groups' : 'testhelpers.md'
     - 'Run TestNG': 'runningtestng.md'
     - 'TestNG XML': 'testngxml.md'
@@ -20,4 +21,6 @@ nav:
     - ' Selenium ': 'selenium.md'
     - 'Eclipse' : 'eclipse.md'
     - 'Intelli JIdea' : 'idea.md'
+
+copyright: 'Stylized docs of TestNG by Yatheesh Raju'
 
