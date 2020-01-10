@@ -968,7 +968,7 @@ java -classpath "testng-jdk15.jar:test/build" org.testng.TestNG -listener test.m
    -testclass test.methodinterceptors.FooTest
 ```
 
-For the equivalent ant syntax, see the listeners attribute in the [ant documentation](/ant).
+For the equivalent ant syntax, see the listeners attribute in the [ant documentation](ant.md).
 
 For example, here is a Method Interceptor that will reorder the methods so that test methods that belong to the group "fast" are always run first:
 
@@ -1001,14 +1001,14 @@ There are several interfaces that allow you to modify TestNG's behavior. These i
 * IHookable ([doc](#overriding-test-methods), [javadoc](https://jitpack.io/com/github/cbeust/testng/master/javadoc/org/testng/IHookable.html))
 * IInvokedMethodListener ([doc](#method-interceptors), [javadoc](https://jitpack.io/com/github/cbeust/testng/master/javadoc/org/testng/IInvokedMethodListener.html))
 * IMethodInterceptor ([doc](#method-interceptors)), [javadoc](https://jitpack.io/com/github/cbeust/testng/master/javadoc/org/testng/IMethodInterceptor.html))
-* IReporter ([doc](/logging#logging-reporters), [javadoc](https://jitpack.io/com/github/cbeust/testng/master/javadoc/org/testng/IReporter.html))
+* IReporter ([doc](logging.md#logging-reporters), [javadoc](https://jitpack.io/com/github/cbeust/testng/master/javadoc/org/testng/IReporter.html))
 * ISuiteListener (doc, [javadoc](https://jitpack.io/com/github/cbeust/testng/master/javadoc/org/testng/ISuiteListener.html))
-* ITestListener ([doc](/logging#logging-listners), [javadoc](https://jitpack.io/com/github/cbeust/testng/master/javadoc/org/testng/ITestListener.html))
+* ITestListener ([doc](logging.md#logging-listners), [javadoc](https://jitpack.io/com/github/cbeust/testng/master/javadoc/org/testng/ITestListener.html))
 
 When you implement one of these interfaces, you can let TestNG know about it with either of the following ways:
 
-* Using -listener on the [command line](/runningtestng).
-* Using &lt;listeners&gt; with [ant](/ant).
+* Using -listener on the [command line](runningtestng.md).
+* Using &lt;listeners&gt; with [ant](ant.md).
 * Using &lt;listeners&gt; in your testng.xml file.
 * Using the @Listeners annotation on any of your test classes.
 * Using ServiceLoader.

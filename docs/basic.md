@@ -4,8 +4,8 @@
 
 Writing a test is typically a three-step process:
 
-1. Write the business logic of your test and insert [TestNG annotations](/annotations) in your code.
-2. Add the information about your test (e.g. the class name, the groups you wish to run, etc...) in a [testng.xml](/testngxml) file or in build.xml.
+1. Write the business logic of your test and insert [TestNG annotations](annotations.md) in your code.
+2. Add the information about your test (e.g. the class name, the groups you wish to run, etc...) in a [testng.xml](testngxml.md) file or in build.xml.
 3. Run TestNG.
 
 
@@ -14,9 +14,9 @@ You can find a quick example on the Getting Started page.
 
 The concepts used in this documentation are as follows:
 
-* A suite is represented by one XML file. It can contain one or more tests and is defined by the <suite> tag.
-* A test is represented by <test> and can contain one or more TestNG classes.
-* A TestNG class is a Java class that contains at least one TestNG annotation. It is represented by the <class> tag and can contain one or more test methods.
+* A suite is represented by one XML file. It can contain one or more tests and is defined by the &lt;suite&gt; tag.
+* A test is represented by &lt;test&gt; and can contain one or more TestNG classes.
+* A TestNG class is a Java class that contains at least one TestNG annotation. It is represented by the &lt;class&gt; tag and can contain one or more test methods.
 * A test method is a Java method annotated by @Test in your source.
 * A TestNG test can be configured by @BeforeXXX and @AfterXXX annotations which allows to perform some Java logic before and after a certain point, these points being either of the items listed above.
 

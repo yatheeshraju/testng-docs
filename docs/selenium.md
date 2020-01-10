@@ -108,7 +108,7 @@ If you are familiar with unit testing frameworks, you probably know about the se
 
 This is very useful for our Selenium tests because you can create a Selenium server and browser instance before you start running your test suite.)
 
-To achieve this, we will use two TestNG [annotations](/annotations): @BeforeSuite and @AfterSuite:
+To achieve this, we will use two TestNG [annotations](annotations.md): @BeforeSuite and @AfterSuite:
 
 ```java 
 @BeforeSuite(alwaysRun = true)

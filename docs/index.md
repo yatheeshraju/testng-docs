@@ -45,7 +45,7 @@ If you think you found a bug, here is how to report it:
 * If the bug you observed is on the Eclipse plug-in, make sure your sample project contains the .project and .classpath files.
 * [File a bug](https://github.com/cbeust/testng/issues).
 
-For more information, you can either [download](/download/) TestNG, read the [manual](/gettingstarted/).
+For more information, you can either [download](download.md) TestNG, read the [manual](gettingstarted.md).
 
 ### License
 Apache 2.0

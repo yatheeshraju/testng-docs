@@ -74,7 +74,7 @@ TestNG can also run directly on classes, also supplied with a [FileSet](http://a
 
 ##### jvmarg
 
-Additional parameters may be passed to the new VM via nested <jvmarg> elements. For example:
+Additional parameters may be passed to the new VM via nested &lt;jvmarg&gt; elements. For example:
 
 ```xml
 <testng>
@@ -84,7 +84,7 @@ Additional parameters may be passed to the new VM via nested <jvmarg> elements. 
 ```
 ##### sysproperty
 
-Use nested <sysproperty> elements to specify system properties required by the class. These properties will be made available to the virtual machine during the execution of the test. The attributes for this element are the same as for 
+Use nested &lt;sysproperty&gt; elements to specify system properties required by the class. These properties will be made available to the virtual machine during the execution of the test. The attributes for this element are the same as for 
 
 ##### environment variables:
 
@@ -99,7 +99,7 @@ will run the test and make the basedir property available to the test.
 
 ##### propertyset
 
-You may also use a nested <propertyset> element to specify a set of system properties that are defined outside of the TestNG ant task. This allows for more flexible definitions of system properties, for instance selecting all properties with a specific prefix or matching a regex. See the [PropertySet](http://ant.apache.org/manual/Types/propertyset.html) page in the [Ant manual](http://ant.apache.org/manual/) for full details. Here's a simple example:
+You may also use a nested &lt;propertyset&gt; element to specify a set of system properties that are defined outside of the TestNG ant task. This allows for more flexible definitions of system properties, for instance selecting all properties with a specific prefix or matching a regex. See the [PropertySet](http://ant.apache.org/manual/Types/propertyset.html) page in the [Ant manual](http://ant.apache.org/manual/) for full details. Here's a simple example:
 
 ```xml
 <property name="myprop1" value="value 1"/>
@@ -120,8 +120,8 @@ In this case, the system properties named "myprop1" and "myprop2" are passed alo
 
 ##### reporter
 
-An inner <reporter> element is an alternative way to inject a custom report listener allowing the user to set custom properties in order to fine-tune the behavior of the reporter at run-time.
-The element has one classname attribute which is mandatory, indicating the class of the custom listener. In order to set the properties of the reporter, the <reporter> element can contain several nested <property> elements which will provide the name and value attributes as seen below:
+An inner &lt;reporter&gt; element is an alternative way to inject a custom report listener allowing the user to set custom properties in order to fine-tune the behavior of the reporter at run-time.
+The element has one classname attribute which is mandatory, indicating the class of the custom listener. In order to set the properties of the reporter, the &lt;reporter&gt; element can contain several nested &lt;property&gt; elements which will provide the name and value attributes as seen below:
 
 ```xml
 <testng ...>
@@ -148,7 +148,7 @@ You have to consider though that for the moment only a limited set of property t
 
 ##### env
 
-It is possible to specify environment variables to pass to the TestNG forked virtual machine via nested <env> elements. For a description of the <env> element's attributes, see the description in the exec task.
+It is possible to specify environment variables to pass to the TestNG forked virtual machine via nested <env> elements. For a description of the &lt;env&gt; element's attributes, see the description in the exec task.
 
 #### Examples
 

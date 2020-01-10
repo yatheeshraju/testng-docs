@@ -3,9 +3,9 @@
 TestNG can be invoked in different ways:
 
 * Command line
-* [ant](/ant)
-* [Eclipse](/eclipse)
-* [IntelliJ's IDEA](/idea)
+* [ant](ant.md)
+* [Eclipse](eclipse.md)
+* [IntelliJ's IDEA](idea.md)
 
 This section only explains how to invoke TestNG from the command line. Please click on one of the links above if you are interested in one of the other ways.
 
@@ -39,7 +39,7 @@ You can have as many occurrences of this option, one for each reporter that need
 -testclass	| A comma-separated list of classes that can be found in your classpath.|	A list of class files separated by commas (e.g. "org.foo.Test1,org.foo.test2").
 -testjar|	A jar file.	| Specifies a jar file that contains test classes. If a testng.xml file is found at the root of that jar file, it will be used, otherwise, all the test classes found in this jar file will be considered test classes.
 -testname	|The default name to use for a test.|	This specifies the name for a test defined on the command line. This option is ignored if the suite.xml file or the source code specifies a different test name. It is possible to create a test name with spaces in it if you surround it with double-quotes "like this".
--testnames |	A comma separated list of test names.	| Only tests defined in a <test> tag matching one of these names will be run.
+-testnames |	A comma separated list of test names.	| Only tests defined in a &lt;test&gt; tag matching one of these names will be run.
 -testrunfactory	| A Java classes that can be found on your classpath.	| Lets you specify your own test runners. The class needs to implement org.testng.ITestRunnerFactory.
 -threadcount	| The default number of threads to use when running tests in parallel. |	This sets the default maximum number of threads to use for running tests in parallel. It will only take effect if the parallel mode has been selected (for example, with the -parallel option). This can be overridden in the suite definition.
 -xmlpathinjar	| The path of the XML file inside the jar file.	 | This attribute should contain the path to a valid XML file inside the test jar (e.g. "resources/testng.xml"). The default is "testng.xml", which means a file called "testng.xml" at the root of the jar file. This option will be ignored unless -testjar is specified.

@@ -8,7 +8,7 @@ You can invoke TestNG in several different ways:
 
 This section describes the format of testng.xml (you will find documentation on ant and the command line below).
 
-The current DTD for testng.xml :  [testng-1.0.dtd](./testng-1.0.dtd) 
+The current DTD for testng.xml :  [testng-1.0.dtd](testng-1.0.dtd) 
 
 Here is an example testng.xml file:
 
@@ -88,4 +88,4 @@ By default, TestNG will run your tests in the order they are found in the XML fi
   </classes>
 </test>
 ```
-Please see the [DTD](./testng-1.0.dtd) for a complete list of the features, or read on.
+Please see the [DTD](testng-1.0.dtd) for a complete list of the features, or read on.
