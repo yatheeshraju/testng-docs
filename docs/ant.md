@@ -53,7 +53,8 @@ The TestNG mode gets applied when tests are passed to TestNG using classfilesetr
 * "junit": find and run JUnit tests.
 * "mixed": run both TestNG and JUnit tests.
 
-Note: "junit" and "mixed" modes require the JUnit jar file on the classpath.
+!!! note
+    "junit" and "mixed" modes require the JUnit jar file on the classpath.
 
 #### Nested Elements
 ##### classpath

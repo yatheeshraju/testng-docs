@@ -25,7 +25,8 @@ public void verify() {
 }
 
 ``` 
-> Note that the above code use a static import in order to be able to use the assertEquals method without having to prefix it by its class.
+!!! note
+    Above code use a static import in order to be able to use the assertEquals method without having to prefix it by its class.
 
 ### Logging and results
 
@@ -88,7 +89,8 @@ Total tests run: 226, Failures: 0, Skips: 0
 
 ``` 
 
->Note that when you use -listener, TestNG will automatically determine the type of listener you want to use.
+!!! info
+    When you use -listener, TestNG will automatically determine the type of listener you want to use.
 
 #### Logging Reporters
 
@@ -115,7 +117,8 @@ TestNG contains a listener that takes the TestNG results and outputs an XML file
 </target>
 ```
 
-> Note:  a current incompatibility between the JDK 1.5 and JUnitReports prevents the frame version from working, so you need to specify "noframes" to get this to work for now.
+!!! note
+    A current incompatibility between the JDK 1.5 and JUnitReports prevents the frame version from working, so you need to specify "noframes" to get this to work for now.
 
 ####  Reporter API
 If you need to log messages that should appear in the generated HTML reports, you can use the class [org.testng.Reporter](https://jitpack.io/com/github/cbeust/testng/master/javadoc/org/testng/Reporter.html):

@@ -16,7 +16,9 @@ or
 TestNG allows you to perform sophisticated groupings of test methods. Not only can you declare that methods belong to groups, but you can also specify groups that contain other groups. Then TestNG can be invoked and asked to include a certain set of groups (or regular expressions) while excluding another set.  This gives you maximum flexibility in how you partition your tests and doesn't require you to recompile anything if you want to run two different sets of tests back to back.
 
 Groups are specified in your testng.xml file and can be found either under the &lt;test&gt; or  &lt;suite&gt; tag. Groups specified in the &lt;suite&gt; tag apply to all the &lt;test&gt; tags underneath. 
-> Note that groups are accumulative in these tags: if you specify group "a" in &lt;suite&gt; and "b" in  &lt;test&gt;, then both "a" and "b" will be included.
+
+!!! note "" 
+    Note that groups are accumulative in these tags: if you specify group "a" in &lt;suite&gt; and "b" in  &lt;test&gt;, then both "a" and "b" will be included.
 
 For example, it is quite common to have at least two categories of tests
 
@@ -94,7 +96,10 @@ You could use the following testng.xml to launch only the Windows methods:
 </test>
 ```
 
-> Note: TestNG uses [regular expressions](http://en.wikipedia.org/wiki/Regular_expression), and not [wildmats](http://en.wikipedia.org/wiki/Wildmat). Be aware of the difference (for example, "anything" is matched by ".*" -- dot star -- and not "*").
+!!! warning 
+    TestNG uses [regular expressions](http://en.wikipedia.org/wiki/Regular_expression), and not [wildmats](http://en.wikipedia.org/wiki/Wildmat). Be aware of the difference (for example, "anything" is matched by ".*" -- dot star -- and not "\*").
+
+
 #### Method groups
 
 You can also exclude or include individual methods:
@@ -173,7 +178,8 @@ All I need to do now is to exclude this group from the run:
 
 This way, I will get a clean test run while keeping track of what tests are broken and need to be fixed later.
 
-> Note:  you can also disable tests on an individual basis by using the "enabled" property available on both @Test and @Before/After annotations.
+!!! info
+    you can also disable tests on an individual basis by using the "enabled" property available on both @Test and @Before/After annotations.
 
 ### Partial groups
 
@@ -247,9 +253,9 @@ The @Parameters annotation can be placed at the following locations:
 * On any method that already has a @Test, @Before/After or @Factory annotation.
 * On at most one constructor of your test class.  In this case, TestNG will invoke this particular constructor with the parameters initialized to the values specified in testng.xml whenever it needs to instantiate your test class.  This feature can be used to initialize fields inside your classes to values that will then be used by your test methods.
 
-> Notes:
-> The XML parameters are mapped to the Java parameters in the same order as they are found in the annotation, and TestNG will issue an error if the numbers don't match.
-> Parameters are scoped. In testng.xml, you can declare them either under a &lt;suite&gt; tag or under &lt;test&gt;. If two parameters have the same name, it's the one defined in &lt;test&gt; that has precedence. This is convenient if you need to specify a parameter applicable to all your tests and override its value only for certain tests.
+!!! info 
+    The XML parameters are mapped to the Java parameters in the same order as they are found in the annotation, and TestNG will issue an error if the numbers don't match.
+    Parameters are scoped. In testng.xml, you can declare them either under a &lt;suite&gt; tag or under &lt;test&gt;. If two parameters have the same name, it's the one defined in &lt;test&gt; that has precedence. This is convenient if you need to specify a parameter applicable to all your tests and override its value only for certain tests.
 
 #### Parameters with DataProviders
 
@@ -448,7 +454,8 @@ public void method1() {}
 
 In this example, method1() is declared as depending on any group matching the regular expression "init.*", which guarantees that the methods serverStartedOk() and initEnvironment() will always be invoked before method1(). 
 
-Note:  as stated before, the order of invocation for methods that belong in the same group is not guaranteed to be the same across test runs.
+!!! summary
+    As stated before, the order of invocation for methods that belong in the same group is not guaranteed to be the same across test runs.
 
 If a method depended upon fails and you have a hard dependency on it (alwaysRun=false, which is the default), the methods that depend on it are not marked as FAIL but as SKIP.  Skipped methods will be reported as such in the final report (in a color that is neither red nor green in HTML), which is important since skipped methods are not necessarily failures.
 
@@ -714,7 +721,8 @@ The parallel attribute on the <suite> tag can take one of following values:
 
 Additionally, the attribute thread-count allows you to specify how many threads should be allocated for this execution.
 
-> Note: the @Test attribute timeOut works in both parallel and non-parallel mode.
+!!! note
+    The @Test attribute timeOut works in both parallel and non-parallel mode.
 
 You can also specify that a @Test method should be invoked from different threads. You can use the attribute threadPoolSize to achieve this result:
 ```java
@@ -734,7 +742,8 @@ java -classpath testng.jar;%CLASSPATH% org.testng.TestNG -d test-outputs test-ou
 
 ```
 
-> Note that testng-failed.xml will contain all the necessary dependent methods so that you are guaranteed to run the methods that failed without any SKIP failures.
+!!! warning 
+    Note that testng-failed.xml will contain all the necessary dependent methods so that you are guaranteed to run the methods that failed without any SKIP failures.
 
 
 Sometimes, you might want TestNG to automatically retry a test whenever it fails. In those situations, you can use a retry analyzer. When you bind a retry analyzer to a test, TestNG automatically invokes the retry analyzer to determine if TestNG can retry a test case again in an attempt to see if the test that just fails now passes. 
@@ -1001,9 +1010,9 @@ There are several interfaces that allow you to modify TestNG's behavior. These i
 * IHookable ([doc](#overriding-test-methods), [javadoc](https://jitpack.io/com/github/cbeust/testng/master/javadoc/org/testng/IHookable.html))
 * IInvokedMethodListener ([doc](#method-interceptors), [javadoc](https://jitpack.io/com/github/cbeust/testng/master/javadoc/org/testng/IInvokedMethodListener.html))
 * IMethodInterceptor ([doc](#method-interceptors)), [javadoc](https://jitpack.io/com/github/cbeust/testng/master/javadoc/org/testng/IMethodInterceptor.html))
-* IReporter ([doc](logging.md#logging-reporters), [javadoc](https://jitpack.io/com/github/cbeust/testng/master/javadoc/org/testng/IReporter.html))
+* IReporter ([doc](testresults.md#logging-reporters), [javadoc](https://jitpack.io/com/github/cbeust/testng/master/javadoc/org/testng/IReporter.html))
 * ISuiteListener (doc, [javadoc](https://jitpack.io/com/github/cbeust/testng/master/javadoc/org/testng/ISuiteListener.html))
-* ITestListener ([doc](logging.md#logging-listners), [javadoc](https://jitpack.io/com/github/cbeust/testng/master/javadoc/org/testng/ITestListener.html))
+* ITestListener ([doc](testresults.md#logging-listners), [javadoc](https://jitpack.io/com/github/cbeust/testng/master/javadoc/org/testng/ITestListener.html))
 
 When you implement one of these interfaces, you can let TestNG know about it with either of the following ways:
 
@@ -1037,7 +1046,8 @@ public class MyTest {
 
 The @Listeners annotation can contain any class that extends org.testng.ITestNGListener except IAnnotationTransformer and IAnnotationTransformer2. The reason is that these listeners need to be known very early in the process so that TestNG can use them to rewrite your annotations, therefore you need to specify these listeners in your testng.xml file.
 
-> Note that the @Listeners annotation will apply to your entire suite file, just as if you had specified it in a testng.xml file. If you want to restrict its scope (for example, only running on the current class), the code in your listener could first check the test method that's about to run and decide what to do then. Here's how it can be done.
+!!! warning
+    The @Listeners annotation will apply to your entire suite file, just as if you had specified it in a testng.xml file. If you want to restrict its scope (for example, only running on the current class), the code in your listener could first check the test method that's about to run and decide what to do then. Here's how it can be done.
 
 First define a new custom annotation that can be used to specify this restriction:
 ```java 

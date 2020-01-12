@@ -4,6 +4,12 @@ repo_url: https://github.com/yatheeshraju/testng-docs
 
 theme: 'material'
 
+markdown_extensions:
+  - codehilite
+  - admonition
+  - toc:
+      permalink: true
+
 nav:
     - 'Welcome' : 'index.md'
     - 'Introduction' : 'basic.md'

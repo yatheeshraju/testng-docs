@@ -39,9 +39,10 @@ tests:
 Here is [TestNG's own suite ](https://github.com/cbeust/testng/blob/master/src/test/resources/testng.xml)file, and its [YAML counterpart](https://github.com/cbeust/testng/blob/master/src/test/resources/testng.yaml).
 You might find the YAML file format easier to read and to maintain. YAML files are also recognized by the TestNG Eclipse plug-in. You can find more information about YAML and TestNG in this blog post.
 
->Note:
->TestNG by default does not bring in the YAML related library into your classpath. So depending upon your build system (Gradle/Maven) you need to add an explicit reference to YAML library in your build file.
->For e.g, If you were using Maven, you would need to add a dependency as below into your pom.xml file:
+!!! info 
+    TestNG by default does not bring in the YAML related library into your classpath. So depending upon your build system (Gradle/Maven) you need to add an explicit reference to YAML library in your build file.
+    
+For e.g, If you were using Maven, you would need to add a dependency as below into your pom.xml file:
 
 ```xml
 <dependency>

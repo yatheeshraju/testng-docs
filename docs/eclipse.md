@@ -7,7 +7,8 @@ The TestNG Eclipse plug-in allows you to run your TestNG tests from Eclipse and 
 
 Follow the instructions to install the plug-in.
 
-> NOTE: since TestNG Eclipse Plugin 6.9.10, there is a new optional plug-in for M2E (Maven Eclipse Plugin) integration. It's recommended to install it if your Java project(s) are managed by Maven.
+!!! info
+    Since TestNG Eclipse Plugin 6.9.10, there is a new optional plug-in for M2E (Maven Eclipse Plugin) integration. It's recommended to install it if your Java project(s) are managed by Maven.
 
 
 
@@ -15,7 +16,8 @@ Once done, restart Eclipse and select the menu Window / Show View / Other...  an
 
 ![screenshot](assets/images/view.png)
 
-> NOTE: since TestNG Eclipse Plugin 6.9.8, the minimum required TestNG version is 6.5.1
+!!! info
+    since TestNG Eclipse Plugin 6.9.8, the minimum required TestNG version is 6.5.1
 
 ###  Creating a TestNG class
 
@@ -239,7 +241,9 @@ You can pass the following Maven configuration parameters to the TestNG process:
 * systemPropertyVariables: the system properties
 * environmentVariables: the environment variables
 
-> NOTE: as the snippet of the configuration above shows, properties placeholders (e.g. ${aspectj.version}) in argLine or systemPropertyVariables will be substituted and correctly passed to the TestNG process as long as the properties are visible on the Maven project (e.g. defined in the current pom.xml, or inherited from the parent pom.xml, etc.).
+!!! note 
+    As the snippet of the configuration above shows, properties placeholders (e.g. ${aspectj.version}) in argLine or systemPropertyVariables will be substituted and correctly passed to the TestNG process as long as the properties are visible on the Maven project (e.g. defined in the current pom.xml, or inherited from the parent pom.xml, etc.).
 
 
-> NOTE: if your maven-surefire-plugin is defined in a Maven profile, you will need to select the Maven profile which contains the maven-surefire-plugin configuration: "Right click on the project -> Maven -> Select Maven Profiles...", then check the profile you need.
+!!! info 
+    If your maven-surefire-plugin is defined in a Maven profile, you will need to select the Maven profile which contains the maven-surefire-plugin configuration: "Right click on the project -> Maven -> Select Maven Profiles...", then check the profile you need.

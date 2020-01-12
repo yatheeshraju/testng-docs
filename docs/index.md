@@ -1,7 +1,7 @@
 # Welcome 
 
->Note : This is not official documentation . Visit [https://testng.org/](https://testng.org/) for official documentation .
->Its just a stylized version of the official documentation . by [yatheeshraju](https://github.com/yatheeshraju/)
+!!! note 
+    This is not official documentation . Visit [https://testng.org/](https://testng.org/) for official documentation .Its just a stylized version of the official documentation .
 
 TestNG is a testing framework inspired from JUnit and NUnit but introducing some new functionalities that make it more powerful and easier to use, such as:
 
