@@ -5,10 +5,12 @@ repo_url: https://github.com/yatheeshraju/testng-docs
 theme: 'material'
 
 markdown_extensions:
-  - codehilite
-  - admonition
-  - toc:
-      permalink: true
+    - codehilite
+    - admonition
+    - toc:
+        permalink: true
+    - pymdownx.snippets:
+        base_path: docs
 
 nav:
     - 'Welcome' : 'index.md'
@@ -30,6 +32,7 @@ nav:
     - 'Intelli JIdea' : 'idea.md'
     - 'Java Doc' : 'https://javadoc.jitpack.io/com/github/cbeust/testng/master/javadoc/' 
     - 'Book' : 'book.md'
+    - 'Full Docs' : 'fulldoc.md'
 
 
 copyright: 'Stylized docs of TestNG by Yatheesh Raju'
