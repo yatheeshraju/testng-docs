@@ -49,5 +49,3 @@ For more information, you can either [download](download.md) TestNG, read the [m
 
 ### License
 Apache 2.0
-
-include ant.md
